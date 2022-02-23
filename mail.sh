@@ -7,6 +7,8 @@ echo "127.0.0.1 mailserver.jdajs.cf mailserver" | sudo tee -a /etc/hosts
 #users
 sudo useradd -m test1
 echo test1:qweR1234 | sudo chpasswd
+sudo useradd -m test2
+echo test1:qweR1234 | sudo chpasswd
 #postfix install
 sudo wget https://raw.githubusercontent.com/Tikijavi/Mail-terraform/main/postfix-confjs.sh
 sudo sh postfix-confjs.sh
