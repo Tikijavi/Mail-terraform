@@ -4,6 +4,9 @@ sudo hostnamectl set-hostname mailserver
 sudo rm /etc/hosts
 echo "127.0.0.1 localhost" | sudo tee /etc/hosts
 echo "127.0.0.1 mailserver.jdajs.cf mailserver" | sudo tee -a /etc/hosts
+#update
+sudo apt-get update 
+sudo apt-get upgrade -y
 #users
 sudo useradd -m test1
 echo test1:qweR1234 | sudo chpasswd
