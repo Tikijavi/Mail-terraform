@@ -23,8 +23,12 @@ sudo cp 10-mail.conf /etc/dovecot/conf.d/10-mail.conf
 sudo cp 10-auth.conf /etc/dovecot/conf.d/10-auth.conf
 
 #mysql install
-sudo apt install mysql-server mysql-server-core-8.0 mysql-server-client-8.0 -y
+sudo apt install mysql-server 
+sudo apt mysql-server-core-8.0 
+sudo apt mysql-server-client-8.0 -y
 
+#Rouncube configurations
+sudo apt install php7.4 libapache2-mod-php7.4 php7.4-common php7.4-mysql php7.4-cli php-pear php7.4-opcache php7.4-gd php7.4-curl php7.4-cli php7.4-imap php7.4-mbstring php7.4-intl php7.4-soap php7.4-ldap php-imagick php7.4-xmlrpc php7.4-xml php7.4-zip -y
 
 
 #reboot services
