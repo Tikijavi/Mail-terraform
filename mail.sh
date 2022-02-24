@@ -35,7 +35,11 @@ mysql -e "FLUSH PRIVILEGES;"
 
 #Rouncube configurations
 sudo apt install php7.4 libapache2-mod-php7.4 php7.4-common php7.4-mysql php7.4-cli php-pear php7.4-opcache php7.4-gd php7.4-curl php7.4-cli php7.4-imap php7.4-mbstring php7.4-intl php7.4-soap php7.4-ldap php-imagick php7.4-xmlrpc php7.4-xml php7.4-zip -y
-
+sudo pear install Auth_SASL2 Net_SMTP Net_IDNA2-0.1.1 Mail_mime Mail_mimeDecode
+sudo wget https://github.com/roundcube/roundcubemail/releases/download/1.5.2/roundcubemail-1.5.2-complete.tar.gz
+sudo tar -xvzf roundcubemail-1.5.2-complete.tar.gz
+sudo mv roundcubemail-1.5.2 /var/www/roundcube
+sudo chown -R www-data:www-data /var/www/roundcube/
 
 #reboot services
 sudo systemctl restart postfix
