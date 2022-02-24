@@ -53,5 +53,5 @@ sudo a2enmod rewrite
 #reboot services
 sudo systemctl restart postfix
 sudo systemctl restart dovecot
-sudo service apache2 restart
+sudo systemctl restart apache2
 
