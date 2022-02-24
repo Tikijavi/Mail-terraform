@@ -22,10 +22,8 @@ sudo wget https://raw.githubusercontent.com/Tikijavi/Mail-terraform/main/10-auth
 sudo cp 10-mail.conf /etc/dovecot/conf.d/10-mail.conf
 sudo cp 10-auth.conf /etc/dovecot/conf.d/10-auth.conf
 
-
-
-
-
+#mysql install
+sudo apt install mysql-server mysql-server-core-8.0 mysql-server-client-8.0 -y
 
 
 
