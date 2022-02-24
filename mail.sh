@@ -27,6 +27,12 @@ sudo apt-get install mysql-server -y
 sudo apt-get install mysql-server-core-8.0 -y
 sudo apt-get install mysql-server-client-8.0 -y
 
+#mysql conf
+mysql -e "CREATE DATABASE roundcube;"
+mysql -e "CREATE USER roundcube@localhost IDENTIFIED BY 'Puerta69*';"
+mysql -e "GRANT ALL PRIVILEGES ON rouncube.* TO 'rouncube'@'localhost';"
+mysql -e "FLUSH PRIVILEGES;"
+
 #Rouncube configurations
 sudo apt install php7.4 libapache2-mod-php7.4 php7.4-common php7.4-mysql php7.4-cli php-pear php7.4-opcache php7.4-gd php7.4-curl php7.4-cli php7.4-imap php7.4-mbstring php7.4-intl php7.4-soap php7.4-ldap php-imagick php7.4-xmlrpc php7.4-xml php7.4-zip -y
 
