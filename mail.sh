@@ -43,6 +43,8 @@ sudo wget https://github.com/roundcube/roundcubemail/releases/download/1.5.2/rou
 sudo tar -xvzf roundcubemail-1.5.2-complete.tar.gz
 sudo mv roundcubemail-1.5.2 /var/www/roundcube
 sudo chown -R www-data:www-data /var/www/roundcube/
+sudo wget https://raw.githubusercontent.com/Tikijavi/Mail-terraform/main/004-roundcube.conf
+sudo mv 004-roundcube.conf /etc/apache2/sites-available/004-roundcube.conf
 sudo a2dissite 000-default.conf
 sudo a2ensite 004-roundcube.conf
 sudo a2enmod rewrite
