@@ -34,5 +34,25 @@ resource "aws_instance" "instance" {
     "Name"                = "${var.owner}-instance"
     "KeepInstanceRunning" = "false"
   }
+  
+  provisioner "file" {
+    source      = "~/primer-exemple/postfix-conf"
+    destination = "/tmp/postfix-conf"
+  }
+    
+  provisioner "remote-exec" {
+    inline = [
+      "chmod +x /tmp/postfix-conf",
+      "sudo /tmp/postfix-conf",
+    ]
+  }
+
+  connection {
+    type        = "ssh"
+    user        = "ubuntu"
+    password    = ""
+    private_key = "${file("joc-key-pair")}"
+    host        = self.public_ip
+  }
 }
 
