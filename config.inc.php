@@ -15,7 +15,7 @@
 //       for Mysql: key, cipher, cert, capath, ca, verify_server_cert,
 //       for Postgres: application_name, sslmode, sslcert, sslkey, sslrootcert, sslcrl, sslcompression, service.
 //       e.g. 'mysql://roundcube:@localhost/roundcubemail?verify_server_cert=false'
-$config['db_dsnw'] = 'mysql://roundcubeuser:1234qweR%2A@localhost/roundcube';
+$config['db_dsnw'] = 'mysql://roundcubeuser:Puerta69*@localhost/roundcube';
 
 // ----------------------------------
 // IMAP
